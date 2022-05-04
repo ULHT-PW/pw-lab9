@@ -1,6 +1,6 @@
 **UNIVERSIDADE LUSÓFONA DE HUMANIDADES E TECNOLOGIAS**
 
-# Lab 9: Portfolio II ⛅
+# Lab 9: Portfolio II 🌤️
 
 ### Objetivo 
 
