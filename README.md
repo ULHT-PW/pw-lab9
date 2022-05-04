@@ -39,16 +39,35 @@ Trabalhe a partir do seu projeto criado no Lab 8.
 
 ## 3. Quizz sobre programação Web
 
-* Conceba um Quizz "programação Web" sobre esse tópico, em especial abordando aspectos falados na sua secção sobre Programação Web (veja em baixo). Siga as indicações do [lab 3](https://github.com/ULHT-PW/pw-lab3#3-p%C3%A1gina-com-quizz-), tentando ter variedade no tipos de perguntas. 
-* Neste caso não precisa de uma base de dados com as perguntas. Construa um formulário diretamente no HTML. Na view, aceda aos resultados diretamente 
-* Crie no models.py uma classe para guardar o nome e pontuação conseguida pelas pessoas que responderem. 
-* Quando o Quizz é submetido, deverá apresentar a pontuação total. Para tal, crie uma função que analisa as respostas e guardada a informação na base de dados. 
-* Crie um gráfico de barras para mostrar os resultados de todas as pessoas que responderam ao Quizz (nome, pontuação). 
-   * Explore o [Matplotlib](https://moodle.ensinolusofona.pt/pluginfile.php/318343/mod_label/intro/pw-03-python-04-matplotlib.pdf?#page=20) para criar um gráfico de barras e gravá-lo. 
-   * Na view do quizz, chame uma função cria_resultados. Esta deverá obter da base de dados todas as respostas ao quizz (nome e pontuação), criar um grafico de barras e guardá-lo na pasta portfolio\static\images. Os resultados devem ser mostrados no topo do Quizz, na sua apresentação, indicando também quem está em primeiro lugar.
+* Conceba um Quizz "programação Web" sobre o tópico, em especial abordando aspectos falados na sua secção sobre Programação Web (veja em baixo). 
+* Não precisa de guardar as respostas às perguntas. Construa o formulário diretamente em HTML no HTML. Explore os vários tipos de entrada tal como sugerido no [lab 3](https://github.com/ULHT-PW/pw-lab3#3-p%C3%A1gina-com-quizz-). Recolha também o nome da pessoa que responder.
+* Se for submetido um formulário através dum POST, a variável `request.POST`é um dicionário que contem a informação submetida, podendoser acedida da seguinte forma: 
+
+```Python
+def quizz(request):
+   if request.method == 'POST'
+      n = request.POST['nome']
+      p = pontuacao_quizz(request)
+      r = PontuacaoQuizz(nome=n, pontuacao=p)
+      r.save()
+```
+* crie uma função que recebe como argumento `request` e calcula e retorna a pontuação obtida pelo participante.
+* Crie no models.py uma classe PontuacaoQuizz para guardar o nome e pontuação conseguida pelas participantes no Quizz.
+* na view, se o `request` for um POST chame a função para obter a cotação. Depois crie um objeto da classe PontuacaoQuizz para guardar o nome e pontuação obtido, e grave  
+* crie a função `desenha_grafico_resultados` (crie-a primeiro usando um Jupyter para verificar que funciona bem, e com uma lista fictícia de resultados):
+   * a função deve ir buscar à base de dados os resultados dos participantes no Quizz (`PontuacaoQuizz.objects.all()`), ordene-o decrescentemente pelas pontuações com a função `sorted` e um um `lambda`. Crie em seguida duas listas, uma de nomes e outra de pontuações
+   * que crie um [gráfico de barras horizontal](https://moodle.ensinolusofona.pt/pluginfile.php/318343/mod_label/intro/pw-03-python-04-matplotlib.pdf?#page=30)) com o módulo matplotlib do Python, mostrando a pontuação no eixo dos x e nomes no eixo dos y). Para tal: 
+   * [Grave](https://moodle.ensinolusofona.pt/pluginfile.php/318343/mod_label/intro/pw-03-python-04-matplotlib.pdf?#page=18) a imagem na pasta portfolio\static\images
+   * apresente a imagem com o gráfico dos resultados no HTML do Quizz, no fim. 
+   * Na view do quizz, depois de cada nova submissão de resposta, chame a função desenha_grafico_resultados para atualizar o gráfico. 
 
 
-## 2. Diagrama Entidade Relação 🛢
+## 4. Portfolio no Heroku ☁
+* Crie um repositório GitHub para o seu projeto
+* [Siga os passos](https://github.com/ULHT-PW-2020-21/pw-deployment) para fazer a correta implantação da aplicação em ambiente de produção no Heroku.
+
+
+## 5. Diagrama Entidade Relação 🛢
 
 * Desenhe o Diagrama Entidade Relação da base de dados que precisará para guardar numa base de dados toda a informação descrita na secção **3**. Use uma ferramenta a seu gosto (por exemplo [draw.io](draw.io)). 
 * Neste laboratório concentrar-se-á na modelação e só no Lab. 10 irá implementar a base de dados. Deverá identificar todas as classes, atributos e relações (1:1, 1:N e N:N).
@@ -56,9 +75,9 @@ Trabalhe a partir do seu projeto criado no Lab 8.
 * Este DER deverá ser apresentado 
 
 
-## 3. Recolha de Conteúdos 📚
+## 6. Recolha de Conteúdos 📚
 
-* Durante esta semana deverá recolher **todo o material em baixo**. Organize-o e guarde-o numa pasta. No Lab 10, após construir a base de dados, irá inserir os conteúdos. Atenção que foram adicionados mais alguns intems em relação à estrutura apresentada no Lab. 8, secção 10. Alterou-se tambem o aninhamento de Licenciatura dentro de Educação.
+* Durante esta semana deverá recolher **todo o material em baixo**. Organize-o e guarde-o num repositório GitHub. No Lab 10, após construir a base de dados, irá inserir os conteúdos. Atenção que foram adicionados mais alguns intems em relação à estrutura apresentada no Lab. 8, secção 10. Alterou-se tambem o aninhamento de Licenciatura dentro de Educação.
 
 * **Hero Page**
   * Redija um texto de apresentação, (que irá colocar na HeroPage no segundo elemento, ver indicação no Lab. 8) que fale de:
@@ -123,37 +142,9 @@ Trabalhe a partir do seu projeto criado no Lab 8.
    * logotipo
 
 
+## 7. Submissão 🏁
 
-## Contacto 🦸🏻‍♂️  
-1. Deverá criar uma página com um formulário de contacto. Quando submetido, os dados deveão ficar guardados na base de dados. Deverá pedir em especial o email e guardá-lo num [campo adequado](https://docs.djangoproject.com/en/3.2/ref/models/fields/#emailfield). 
-1. Deverá ser possível fazer operações CRUD sobre estes dados (listar, editar e apagar contactos).
-1. No próximo lab configuraremos estes aspectos para que estejam disponíveis apenas para utilizadores autenticados.
-
-## Quizz ❓
-1. Crie um Quizz com no mínimo 10 perguntas sobre o tópico do seu projeto. Pode integrá-lo como uma nova app, mas usando o mesmo layout, e estando interligado pelo menu.
-1. Siga as indicações do [lab 3](https://github.com/ULHT-PW-2020-21/pw-lab3#2-p%C3%A1gina-com-quizz) tentando ter alguma variedade de tipos de perguntas. 
-2. Crie no model uma classe para guardar o Quizz
-3. Crie um form para incluir no formulário informação necessário sobre o Quizz. Explore labels, widgets e help-texts.
-4. Quando o Quizz é submetido, deverá apresentar o resultado com uma cotação/nota/qualificação por pergunta e nota global. Para tal, deverá criar uma função na qual deverá analisar as respostas e atribuir cotações, retornando uma página de resultados. 
-5. Os resultados do Quizz deverão ficar guardados numa tabela, na base de dados, um registo por pessoa que responde. Esta irá ser associada a um registo, que implementaremos no próximo laboratorio.
-6. Utilize graficos para mostrar os resultados. Explore o matplotlib (slides disponibilizados). 
-
-# Comentários 😃
-8. Criar uma página comentários sobre o site, como especificado no [lab. 3](https://github.com/ULHT-PW-2020-21/pw-lab3#3-p%C3%A1gina-coment%C3%A1rios). 
-9. Considerando que irá receber muitas avaliações, guarde os dados numa base de dados.
-10. Mostre os resultados recorrendo a gráficos criados com o matplotlib. Para  
-
-
-# Ready... GO! 🏁
-1. Lance a aplicação com o comando `python manage.py runserver` e verifique que consegue visualizar corretamente a aplicação que fez. 
-
-
-
-## 8. Portfolio no Heroku 🌤️
-* Crie um repositório GitHub para o seu projeto
-* Crie outro repositório com o material que recolheu
-
-## 4. Submissão
-
-* submeta no formulário disponivel no Moodle o link para os 2 repositórios e o link para a plicação Heroku.
-
+submeta no formulário disponivel no Moodle:
+* o link para o o repo do portfolio
+* o link para o repo do material recolhido
+* o link para a aplicação a correr no Heroku
