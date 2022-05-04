@@ -30,7 +30,8 @@ Trabalhe a partir do seu projeto criado no Lab 8.
 
 ## 2. Blog
 
-* Implemente um blog, que permite realizar posts. Siga os passos da aplicação [Tarefas](https://github.com/ULHT-PW/pw-aula-django-02/) desenvolvida na aula. No README estão descritos todos os passos seguidos assim como um video da implementação! (incluindo a estilização CSS que não cheguei a fazer na aula por falta de tempo).
+* Implemente um blog, que permite realizar posts. 
+* Siga os passos da aplicação [Tarefas](https://github.com/ULHT-PW/pw-aula-django-02/) desenvolvida na aula. [Experimente a aplicação a correr no Heroku](http://pw-aula03.herokuapp.com/). No README estão descritos todos os passos seguidos assim como um video da implementação! (incluindo a estilização CSS que não cheguei a fazer na aula por falta de tempo).
 * Cada Post terá como atributos autor, data, título, descrição, e opcionalmente um link (para projeto ou página do seu portfolio) e uma imagem. 
 * Explore labels, widgets e help-texts (veja exemplos [aqui](https://github.com/ULHT-PW/pw-aula-django-02/#formul%C3%A1rio)).
 * Use uma única página para listar os posts e no final incluir o formulário para escrever um novo post. 
