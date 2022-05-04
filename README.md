@@ -20,15 +20,52 @@ Trabalhe a partir do seu projeto criado no Lab 8.
 1. se o tiver no computador onde odesenvolveu, basta ativar o ambiente virtual com "pipenv shell".
 2. Se estiver a trabalhar no projeto noutro computador, deve 
    * instalar os modulos necessarios, com o compando `pipenv install`
-   * ativaro ambiente virtual, com `pipenv shell`  
-
+   * ativar o ambiente virtual, com `pipenv shell`  
 
 ## 1. Aprimore a sua aplicação ✨
 4. Este será o seu portfolio, carta de apresentação sua na internet muito valorizada no mundo do trabalho! Por isso, esmere-se, e abrir-lhe-á oportunidades de emprego muitas na medida do que se aplicar neste projeto. 
 * Releia o enunciado do Lab. 8 com atenção e garanta que implementou tudo, e tem tudo a funcionar devidamente
 * Esmere-se no layout, garantindo que tem um aspecto profissional e aplica tecnicas modernas de CSS.
-* Cada página irá listar um conjunto de items (cadeiras, projetos, TFCs) que têmassociados um titulo, imagem, texto e mais alguns atributos. Pense num layout de items independentes / tipo postais, como feito no laboratório anterior lab.5. Crie desde já elementos para cada página, com conteúdos inventados para já. 
-* Garanta que ficam devidamente integrados os laboratórios feitos sobre HTML e JS, realizados anteriormente. Pense numa forma deficarem integrados no seu portfolio.
+* Várias páginas irão apresentar um conjunto de items (cadeiras, projetos, TFCs), com um titulo, imagem, texto e mais alguns atributos. Desenhe o layout destes items independentes / tipo postais, como feito no laboratório anterior lab.5. Crie elementos para cada página, com conteúdos inventados para já. 
+
+## 2. Blog
+
+* Implemente um blog, que permite realizar posts. Siga os passos da aplicação [Tarefas]() desenvolvida na aula, disponível com todos os detalhes (e estilização CSS que não cheguei a fazer por falta de tempo)
+* **Blog**. Post tem atributos autor, data, título e descrição e eventualmente um link (para projeto, página do seu portfolio) e foto. deverá ter pelo menos 5 posts de outros colegas seus a comentar que gostaram de fazer um determinado projeto consigo, ou de certo trabalho que você fez, ou que é um bom colega para estudar
+
+
+
+## 2. Quizz sobre programação Web
+
+* Conceba um Quizz sobre programação Web, em especial sobre aspectos falados na sua secção sobre Programação Web (veja em baixo). Siga as indicações do [lab 3](https://github.com/ULHT-PW/pw-lab3#3-p%C3%A1gina-com-quizz-), tentando ter variedade no tipos de perguntas. Deverá também recolher o nome da pessoa que responde.
+* Crie no models.py uma classe para guardar os resultados das perguntas, relativo às pessoas que responderem.
+* Crie um ficheiro no forms.py para construir um formulário com base na tabela (veja a aplicação desenvolvida na aula). Explore labels, widgets e help-texts.
+* Quando o Quizz é submetido, deverá apresentar o resultado com uma cotação/nota/qualificação por pergunta e nota global. Para tal, deverá criar uma função na qual deverá analisar as respostas e atribuir cotações, retornando uma página de resultados. 
+* Crie um gráfico de barras para mostrar os resultados do Quizz. 
+   * Explore o [Matplotlib](https://moodle.ensinolusofona.pt/pluginfile.php/318343/mod_label/intro/pw-03-python-04-matplotlib.pdf?#page=20) para criar um gráfico de barras e gravá-lo. 
+   * Na view do quizz, chame uma função cria_resultados. Esta deverá obter da base de dados todas as respostas ao quizz (nome e pontuação), criar um grafico de barras e guardá-lo na pasta portfolio\static\images. Os resultados devem ser mostrados no topo do Quizz, na sua apresentação, indicando também quem está em primeiro lugar.
+
+
+## 2. Comentários
+* Crie um formulário para recolher comentários sobre o website, avaliando 10 critérios. Listam-se em baixo alguns padrões intelectuais do pensamento crítico: 
+      * clareza (compreensível, em que o significado pode ser identificado sem que haja confusão ou ambiguidade.)
+      * rigor (livre de erros)
+      * precisão (exato, segundo o nível necessário do pormenor)
+      * profundidade (contém complexidades e múltiplas inter-relações)
+      * amplitude (que abrange diferentes aspectos, pontos de vista, pespectivas)
+      * lógica (em que as partes fazem sentido num todo, sem contradições: faz sentido no conjunto, provém de evidências)
+      * significância (focado no importante, não trivial)
+      * originalidade (criativo e original)
+   * Para tal, crie uma tabela em Models utilize elementos `input` com atributos `range`, `checkbox` e `radio`. Deverá igualmente ter um elemento `textarea` que permita submeter sugestões de melhoria.
+
+* Quando desenvolver o *back-end*, será capaz de processar estes dados introduzidos por
+utilizadores e será capaz de fazer uma análise do seu website assim como uma visão crítica deste. 
+
+# Ready... GO! 🏁
+1. Lance a aplicação com o comando `python manage.py runserver` e verifique que consegue visualizar corretamente a aplicação que fez. 
+
+
+
 
 ## 2. Diagrama Entidade Relação 🛢
 
@@ -87,6 +124,7 @@ Trabalhe a partir do seu projeto criado no Lab 8.
    * Descrição da base de dados e sua modelação, incluindo o DER e explicação de principais relações.
    * lista de tecnologias usadas na criação do website: HTML, CSS, Python, Django, Heroku, JavaScript). Tecnologia terá os seguintes atributos: nome (por extenso), acrónimo (caso exista, e.g., CSS para Cascade Style Sheet), ano de criação, criador, logotipo, imagem exemplificativa (excerto de código, e.g.) link para site oficial, descrição do que é e onde & como foi usado. 
    * lista de padrões usados: padrão arquitetural cliente-servidor HTTP, padrão de software MVC, padrão de comunicação assíncrona (AJAX) 
+   * Comentários: para recolher opiniões sobre o seu website, avaliando 10 critérios, tal como descrito na secção acima.
 
 * **Contacto**
    * links para a sua conta linkedin. se não tiver, crie. Adicione à sua conta de colegas seus, amigos e professores e adira a grupos de interesse na sua área (DEISI)
@@ -104,7 +142,37 @@ Trabalhe a partir do seu projeto criado no Lab 8.
    * logotipo
 
 
+
+## Contacto 🦸🏻‍♂️  
+1. Deverá criar uma página com um formulário de contacto. Quando submetido, os dados deveão ficar guardados na base de dados. Deverá pedir em especial o email e guardá-lo num [campo adequado](https://docs.djangoproject.com/en/3.2/ref/models/fields/#emailfield). 
+1. Deverá ser possível fazer operações CRUD sobre estes dados (listar, editar e apagar contactos).
+1. No próximo lab configuraremos estes aspectos para que estejam disponíveis apenas para utilizadores autenticados.
+
+## Quizz ❓
+1. Crie um Quizz com no mínimo 10 perguntas sobre o tópico do seu projeto. Pode integrá-lo como uma nova app, mas usando o mesmo layout, e estando interligado pelo menu.
+1. Siga as indicações do [lab 3](https://github.com/ULHT-PW-2020-21/pw-lab3#2-p%C3%A1gina-com-quizz) tentando ter alguma variedade de tipos de perguntas. 
+2. Crie no model uma classe para guardar o Quizz
+3. Crie um form para incluir no formulário informação necessário sobre o Quizz. Explore labels, widgets e help-texts.
+4. Quando o Quizz é submetido, deverá apresentar o resultado com uma cotação/nota/qualificação por pergunta e nota global. Para tal, deverá criar uma função na qual deverá analisar as respostas e atribuir cotações, retornando uma página de resultados. 
+5. Os resultados do Quizz deverão ficar guardados numa tabela, na base de dados, um registo por pessoa que responde. Esta irá ser associada a um registo, que implementaremos no próximo laboratorio.
+6. Utilize graficos para mostrar os resultados. Explore o matplotlib (slides disponibilizados). 
+
+# Comentários 😃
+8. Criar uma página comentários sobre o site, como especificado no [lab. 3](https://github.com/ULHT-PW-2020-21/pw-lab3#3-p%C3%A1gina-coment%C3%A1rios). 
+9. Considerando que irá receber muitas avaliações, guarde os dados numa base de dados.
+10. Mostre os resultados recorrendo a gráficos criados com o matplotlib. Para  
+
+
+# Ready... GO! 🏁
+1. Lance a aplicação com o comando `python manage.py runserver` e verifique que consegue visualizar corretamente a aplicação que fez. 
+
+
+
+## 8. Portfolio no Heroku 🌤️
+* Crie um repositório GitHub para o seu projeto
+* Crie outro repositório com o material que recolheu
+
 ## 4. Submissão
 
-* Crie um repositório GitHub para o seu projeto
-* submeta o link para este no formulário disponivel no Moodle.
+* submeta no formulário disponivel no Moodle o link para os 2 repositórios e o link para a plicação Heroku.
+
