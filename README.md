@@ -4,7 +4,7 @@
 
 ### Objetivo 
 
-* Finalizar e aprimorar os requisitos do Lab. 8.
+* Finalizar os requisitos do Lab. 8.
 * Recolher todos os conteúdos necessários, organizados numa pasta e em ficheiros de texto, tal como indicado no Lab. 8.
 * desenhar o diagrama entidade relação da base de dados a construir no Lab. 10
 
@@ -30,46 +30,27 @@ Trabalhe a partir do seu projeto criado no Lab 8.
 
 ## 2. Blog
 
-* Implemente um blog, que permite realizar posts. Siga os passos da aplicação [Tarefas]() desenvolvida na aula, disponível com todos os detalhes (e estilização CSS que não cheguei a fazer por falta de tempo)
-* **Blog**. Post tem atributos autor, data, título e descrição e eventualmente um link (para projeto, página do seu portfolio) e foto. deverá ter pelo menos 5 posts de outros colegas seus a comentar que gostaram de fazer um determinado projeto consigo, ou de certo trabalho que você fez, ou que é um bom colega para estudar
+* Implemente um blog, que permite realizar posts. Siga os passos da aplicação [Tarefas](https://github.com/ULHT-PW/pw-aula-django-02/) desenvolvida na aula. No README estão descritos todos os passos seguidos assim como um video da implementação! (incluindo a estilização CSS que não cheguei a fazer na aula por falta de tempo).
+* Cada Post terá como atributos autor, data, título, descrição, e opcionalmente um link (para projeto ou página do seu portfolio) e uma imagem. 
+* Explore labels, widgets e help-texts (veja exemplos [aqui](https://github.com/ULHT-PW/pw-aula-django-02/#formul%C3%A1rio)).
+* Use uma única página para listar os posts e no final incluir o formulário para escrever um novo post. 
+* Renderize cada post como um "postal", elemento separado como em Tarefas.
 
 
+## 3. Quizz sobre programação Web
 
-## 2. Quizz sobre programação Web
-
-* Conceba um Quizz sobre programação Web, em especial sobre aspectos falados na sua secção sobre Programação Web (veja em baixo). Siga as indicações do [lab 3](https://github.com/ULHT-PW/pw-lab3#3-p%C3%A1gina-com-quizz-), tentando ter variedade no tipos de perguntas. Deverá também recolher o nome da pessoa que responde.
-* Crie no models.py uma classe para guardar os resultados das perguntas, relativo às pessoas que responderem.
-* Crie um ficheiro no forms.py para construir um formulário com base na tabela (veja a aplicação desenvolvida na aula). Explore labels, widgets e help-texts.
-* Quando o Quizz é submetido, deverá apresentar o resultado com uma cotação/nota/qualificação por pergunta e nota global. Para tal, deverá criar uma função na qual deverá analisar as respostas e atribuir cotações, retornando uma página de resultados. 
-* Crie um gráfico de barras para mostrar os resultados do Quizz. 
+* Conceba um Quizz "programação Web" sobre esse tópico, em especial abordando aspectos falados na sua secção sobre Programação Web (veja em baixo). Siga as indicações do [lab 3](https://github.com/ULHT-PW/pw-lab3#3-p%C3%A1gina-com-quizz-), tentando ter variedade no tipos de perguntas. 
+* Neste caso não precisa de uma base de dados com as perguntas. Construa um formulário diretamente no HTML. Na view, aceda aos resultados diretamente 
+* Crie no models.py uma classe para guardar o nome e pontuação conseguida pelas pessoas que responderem. 
+* Quando o Quizz é submetido, deverá apresentar a pontuação total. Para tal, crie uma função que analisa as respostas e guardada a informação na base de dados. 
+* Crie um gráfico de barras para mostrar os resultados de todas as pessoas que responderam ao Quizz (nome, pontuação). 
    * Explore o [Matplotlib](https://moodle.ensinolusofona.pt/pluginfile.php/318343/mod_label/intro/pw-03-python-04-matplotlib.pdf?#page=20) para criar um gráfico de barras e gravá-lo. 
    * Na view do quizz, chame uma função cria_resultados. Esta deverá obter da base de dados todas as respostas ao quizz (nome e pontuação), criar um grafico de barras e guardá-lo na pasta portfolio\static\images. Os resultados devem ser mostrados no topo do Quizz, na sua apresentação, indicando também quem está em primeiro lugar.
 
 
-## 2. Comentários
-* Crie um formulário para recolher comentários sobre o website, avaliando 10 critérios. Listam-se em baixo alguns padrões intelectuais do pensamento crítico: 
-      * clareza (compreensível, em que o significado pode ser identificado sem que haja confusão ou ambiguidade.)
-      * rigor (livre de erros)
-      * precisão (exato, segundo o nível necessário do pormenor)
-      * profundidade (contém complexidades e múltiplas inter-relações)
-      * amplitude (que abrange diferentes aspectos, pontos de vista, pespectivas)
-      * lógica (em que as partes fazem sentido num todo, sem contradições: faz sentido no conjunto, provém de evidências)
-      * significância (focado no importante, não trivial)
-      * originalidade (criativo e original)
-   * Para tal, crie uma tabela em Models utilize elementos `input` com atributos `range`, `checkbox` e `radio`. Deverá igualmente ter um elemento `textarea` que permita submeter sugestões de melhoria.
-
-* Quando desenvolver o *back-end*, será capaz de processar estes dados introduzidos por
-utilizadores e será capaz de fazer uma análise do seu website assim como uma visão crítica deste. 
-
-# Ready... GO! 🏁
-1. Lance a aplicação com o comando `python manage.py runserver` e verifique que consegue visualizar corretamente a aplicação que fez. 
-
-
-
-
 ## 2. Diagrama Entidade Relação 🛢
 
-* Desenhe o Diagrama Entidade Relação com uma ferramenta a seu gosto (por exemplo [draw.io](draw.io)). 
+* Desenhe o Diagrama Entidade Relação da base de dados que precisará para guardar numa base de dados toda a informação descrita na secção **3**. Use uma ferramenta a seu gosto (por exemplo [draw.io](draw.io)). 
 * Neste laboratório concentrar-se-á na modelação e só no Lab. 10 irá implementar a base de dados. Deverá identificar todas as classes, atributos e relações (1:1, 1:N e N:N).
 * Para construir o DER leia com atenção os requisitos da secção 3 onde se detalham muitas das tabelas e atributos que irá ter, assim como relações.
 * Este DER deverá ser apresentado 
