@@ -121,7 +121,7 @@ Estrutura da aplicação:
 * Durante esta semana deverá recolher **todo o material em baixo**. Organize-o e guarde-o num repositório GitHub. No Lab 10, após construir a base de dados, irá inserir os conteúdos. Atenção que foram adicionados mais alguns intems em relação à estrutura apresentada no Lab. 8, secção 10. Alterou-se tambem o aninhamento de Licenciatura dentro de Educação.
 
 * **Hero Page**
-  * Redija um texto de apresentação, (que irá colocar na HeroPage no segundo elemento, ver indicação no Lab. 8) que fale de:
+  * Redija um texto de apresentação que irá colocar na pagina de entrada, HeroPage, no segundo elemento (onde o texto aparece quando fazemos scroll da Hero Page como neste [exemplo](https://codepen.io/LucioStuder/pen/vYpqwra)). Este texto poderá falar de:
     * de motivações para escolher o seu curso, 
     * daquilo que mais tem gostado de aprender no curso,
     * de espectativas do que gostaria de fazer quando acabar o curso. 
