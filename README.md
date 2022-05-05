@@ -115,7 +115,7 @@ Estrutura da aplicação:
 * Blog
 * Contacto
 * Rodapé
-* 
+
 ## 6. Recolha de Conteúdos 📚
 
 * Durante esta semana deverá recolher **todo o material em baixo**. Organize-o e guarde-o num repositório GitHub. No Lab 10, após construir a base de dados, irá inserir os conteúdos. Atenção que foram adicionados mais alguns intems em relação à estrutura apresentada no Lab. 8, secção 10. Alterou-se tambem o aninhamento de Licenciatura dentro de Educação.
