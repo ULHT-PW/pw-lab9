@@ -81,12 +81,14 @@ def quizz(request):
 Eis a estrutura para a qual estamos a convergir (ainda poderá sofrer alguns ajustes)
 
 Estrutura da aplicação:
-* landing page
+* Home (Hero page)
 * Sobre mim
    * Licenciatura
       * cadeiras 
    * Educação
       * escolas 
+   * Certificados
+   * Outras habilitações
    * Aptidões e competências pessoais
       * técnicas
       * organizativas
@@ -95,7 +97,7 @@ Estrutura da aplicação:
    * Interesses e hobbies
 * projetos 
    * realizados por mim
-   * projetos de fim de curso interessantes   
+   * Trabalhos Finais de Curso interessantes   
 * Web   
    * tecnologias existentes
       * front-end
@@ -132,16 +134,16 @@ Estrutura da aplicação:
       * certificados
    * licenciatura, pagina que apresenta a lista de cadeiras do curso, organizada por semestre e anos. Quando clicada uma cadeira, aparece informação relativamente a: nome, ano, semestre, ECTS, ano letivo frequentado, topicos abordados, ranking de 1 a 5 estrelas (indicando se gostou ou não), professores (da classe Pessoa com campos nome e link para a sua pagina da lusofona e no linkedin), link para página da cadeira (se existir), lista de projetos realizados (classe projeto)
    * Aptidões e competências pessoais (com atributos titulo, descrição curta, lista de projetos (Projeto) realizados onde foi aplicada essa competência caso se aplique, lista de disciplinas (Disciplina) onde foi trabalhada essa competência caso se aplique)
-         * [Técnicas]( https://www.e-konomista.pt/competencias-tecnicas/): 
-         * linguagens de programação ou tecnologias, relatórios word, apresentações powerpoint, realização de videos, protótipos
-         * [Organizativas]( https://www.e-konomista.pt/competencias-de-organizacao/)
-         * [Sociais](https://www.e-konomista.pt/aptidoes-e-competencias-sociais)
-         * Linguísticas. lista de linguas estrangeiras faladas, com indicação de nível (proficiente, independente ou elementar), e referencia se existir a certificação obtida ou outra explicação (lingua materna, viveu noutro país)
-   * interesses (com atributos titulo, descrição, fotografia e link (e.g., clube de fotografia) 
-         * outras atividades
-         * desporto
-         * hobbies
-         * voluntariado
+    * [Técnicas]( https://www.e-konomista.pt/competencias-tecnicas/): 
+    * linguagens de programação ou tecnologias, relatórios word, apresentações powerpoint, realização de videos, protótipos
+    * [Organizativas]( https://www.e-konomista.pt/competencias-de-organizacao/)
+    * [Sociais](https://www.e-konomista.pt/aptidoes-e-competencias-sociais)
+    * Linguísticas. lista de linguas estrangeiras faladas, com indicação de nível (proficiente, independente ou elementar), e referencia se existir a certificação obtida ou outra explicação (lingua materna, viveu noutro país)
+ * interesses (com atributos titulo, descrição, fotografia e link (e.g., clube de fotografia) 
+    * outras atividades
+    * desporto
+    * hobbies
+    * voluntariado
 
 * **Projetos**
    * realizados por mim: lista de projetos realizados, com atributos: titulo, descrição até 500 carateres, imagem, ano de realização, cadeira (classe Cadeira, caso tenha sido projeto associado a uma cadeira), participantes (da classe Pessoa, da classe Pessoa com atributos nome e link para a sua pagina no linkedin, e link para a aplicação portfolio do projeto PW), link para repositorio GitHub, link para video no youtube, tecnologias usadas, competencias (classe Competencia)
