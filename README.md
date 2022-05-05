@@ -76,6 +76,44 @@ def quizz(request):
 * Este DER deverá ser apresentado 
 
 
+## 6. Estrutura 🦴🦴🦴 
+
+Eis a estrutura para a qual estamos a convergir (ainda poderá sofrer alguns ajustes)
+
+Estrutura da aplicação:
+* landing page
+* Sobre mim
+   * Licenciatura
+      * cadeiras 
+   * Educação
+      * escolas 
+   * Aptidões e competências pessoais
+      * técnicas
+      * organizativas
+      * sociais
+      * linguisticas
+   * Interesses e hobbies
+* projetos 
+   * realizados por mim
+   * projetos de fim de curso interessantes   
+* Web   
+   * tecnologias existentes
+      * front-end
+      * back-end
+      * outras 
+   * Sobre este website
+      * estrutura do site
+      * diagrama DER
+      * tecnologias usadas
+      * padrões usados     
+   * laboratórios 
+   * notícias
+   * exemplos e técnicas
+   * Quizz    
+* Blog
+* Contacto
+* Rodapé
+* 
 ## 6. Recolha de Conteúdos 📚
 
 * Durante esta semana deverá recolher **todo o material em baixo**. Organize-o e guarde-o num repositório GitHub. No Lab 10, após construir a base de dados, irá inserir os conteúdos. Atenção que foram adicionados mais alguns intems em relação à estrutura apresentada no Lab. 8, secção 10. Alterou-se tambem o aninhamento de Licenciatura dentro de Educação.
@@ -130,7 +168,6 @@ def quizz(request):
 * **Contacto**
    * links para a sua conta linkedin. se não tiver, crie. Adicione à sua conta de colegas seus, amigos e professores e adira a grupos de interesse na sua área (DEISI)
    * link para o seu github
-   * link para conta Instagram, facebook
    * nome da cidade onde vive
    * facebook, instagram
 
